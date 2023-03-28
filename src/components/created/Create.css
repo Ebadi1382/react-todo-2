@@ -1,0 +1,95 @@
+* {
+    background-color: #212121;
+}
+.mainheader {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.select {
+    margin-left: 5rem;
+    padding: 1rem;
+    outline: none;
+    border: 0;
+}
+.form-control {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: center;
+}
+.input-form {
+    padding: 1rem 4rem;
+    background:linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    border-radius: 0 4rem 0 4rem;
+    text-align: center;
+    outline: none;
+    border: 0;
+    box-shadow: 23px 23px 46px #bebebe,
+    -23px -23px 46px #ffffff;
+    font-weight: 900;
+}
+.input-form::placeholder {
+    color: red;
+    font-size: .7rem;
+    font-weight: 900;
+}
+.btn-form {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    margin-left: 3rem;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .btn-form::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .btn-form:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   .btn-form:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+  .select {
+    padding: .5rem;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    
+  }

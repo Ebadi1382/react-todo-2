@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Create from "./components/created/Create";
+import CreateHelp from "./components/CreateHelp/CreateHelp";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [inputText , setInputText] = useState("")
+  const [todos , setTodo] = useState([])
+  const [status , setstatus] = useState("all")
+  const [filterstodo,setFiltersTodo] = useState([])
+
+  useEffect(()=> {
+    filtertodoselect();
+  },[todos,status])
+
+  const filtertodoselect = ()=> {
+    switch (status) {
+      case "compelete":
+        setFiltersTodo(todos.filter((item)=> item.compelete === true));
+        break;
+      case "uncompelete":
+        setFiltersTodo(todos.filter((item)=> item.compelete === false));
+        break;
+      default:
+      setFiltersTodo(todos);
+        break;
+    }
+  }
+
+  return(
+  <React.Fragment>
+   <Create
+  setInputText={setInputText}
+  inputText = {inputText}
+  todos = {todos}
+  setTodo = {setTodo}
+  setstatus = {setstatus}
+  />
+   <CreateHelp 
+   todos={todos}
+   setTodo={setTodo}
+   filterstodo={filterstodo}
+   />
+  </React.Fragment>
+  )
+};
 
 export default App;

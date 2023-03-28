@@ -1,0 +1,31 @@
+.new-div {
+    width: 48%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #fff;
+}
+.new-text {
+    background-color: #fff;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    color: #000;
+}
+.btn-div {
+    outline: none;
+    background-color: #fff;
+    border: 0;
+}
+.btn-new {
+    background-color: #fff;
+    outline: none;
+    border: 0;
+}
+.fa-solid {
+    background-color: #fff;
+}
+.success {
+    background-color: greenyellow;
+}
